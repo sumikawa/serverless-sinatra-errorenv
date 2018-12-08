@@ -1,0 +1,4 @@
+.bundle
+serverless-output.yaml
+vendor
+*~
