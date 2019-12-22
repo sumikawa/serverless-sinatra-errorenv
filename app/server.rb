@@ -8,23 +8,23 @@ end
 get '/:error/:age/*' do
   headers \
     "Cache-Control" => "max-age=#{params[:age]}"
-  body "<pre>#{params[:error]} error</pre>\n"
+  body "<pre>#{params[:error]} error\nTime: #{Time.now.to_s}</pre>\n"
   params[:error].to_i
 end
 
 get '/:error/*' do
-  body "<pre>#{params[:error]} error</pre>\n"
+  body "<pre>#{params[:error]} error\nTime: #{Time.now.to_s}</pre>\n"
   params[:error].to_i
 end
 
 post '/:error/:age/*' do
   headers \
     "Cache-Control" => "max-age=#{params[:age]}"
-  body "<pre>#{params[:error]} error</pre>\n"
+  body "<pre>#{params[:error]} error\nTime: #{Time.now.to_s}</pre>\n"
   params[:error].to_i
 end
 
 post '/:error/*' do
-  body "<pre>#{params[:error]} error</pre>\n"
+  body "<pre>#{params[:error]} error\nTime: #{Time.now.to_s}</pre>\n"
   params[:error].to_i
 end
